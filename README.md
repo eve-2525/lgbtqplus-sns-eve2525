@@ -30,7 +30,7 @@ has_many :followed, class_name: "Relationship", foreign_key: "followed_id", depe
 |user               |references|null: false|foreign_key: true|外部キーuser 悩み投稿者のid
 ### Association
 belongs_to:user
-has_one:comment (子テーブル)
+has_many:comments
 has_many:loves
 
 
@@ -47,6 +47,7 @@ has_many:loves
 ### Association
 belongs_to:user
 belongs_to:worry
+has_many:like
 
 
 
