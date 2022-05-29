@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LGBTQSnsEve2525</title>
+    <title>LGBTQ+</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,5 +15,10 @@
 
   <body>
     <%= yield %>
+        <picture>
+        <source media="(max-width: 480px)" srcset="sp.jpg"> 
+        <source media="(max-width: 768px)" srcset="ipad.jpeg">
+        <img src="test.png" alt=""> 
+      </picture>
   </body>
 </html>
