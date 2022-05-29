@@ -1,0 +1,2 @@
+module WorryHelper
+end

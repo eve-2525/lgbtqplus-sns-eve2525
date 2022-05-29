@@ -6,10 +6,12 @@
 |nickname          |string |null: false|ニックネーム
 |email             |string |null: false|メールアドレス
 |encrypted_password|string |null: false|パスワード
-|sexual            |text   |           |性別
+|sexual            |string |           |性別
 |profile           |text   |           |プロフィール
+has_one_attached :image プロフィール画像
 
 ### Association
+has_one_attached :image
 has_many:worries
 has_many:comments
 has_many:loves
@@ -26,7 +28,7 @@ has_many :followed, class_name: "Relationship", foreign_key: "followed_id", depe
 |-------------------|-------|-----------|
 |title              |string |null: false|タイトル
 |problem            |text   |null: false|悩み
-|status             |text   |null: false|ステータス「受付中」「解決済み」
+|status             |boolean|null: false|ステータス「受付中」「解決済み」
 |user               |references|null: false|foreign_key: true|外部キーuser 悩み投稿者のid
 ### Association
 belongs_to:user
