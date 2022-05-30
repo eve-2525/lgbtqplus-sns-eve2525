@@ -1,3 +1,39 @@
+
+
+.header{
+  position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+  height: 100vh;/*高さを全画面にあわせる*/
+} 
+
+.video-area{
+  position: fixed;
+  z-index: -1;/*最背面に設定*/
+  top: 0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+}
+
+.video {
+  /*天地中央配置*/
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*縦横幅指定*/
+  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  min-height: 100%;
+  min-width: 100%;
+}
+
+
+
+
+
+
 /*
 @media以外の所は全てのサイズで読み込まれます。
 */
@@ -6,7 +42,7 @@ p {
  }
  @media screen and (min-width:480px) {
      /*　画面サイズが480pxからはここを読み込む　*/
- p { color:#ededed;}
+ p { color:#9f1919;}
  }
  @media screen and (min-width:768px) and ( max-width:1024px) {
      /*　画面サイズが768pxから1024pxまではここを読み込む　*/
