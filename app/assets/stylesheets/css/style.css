@@ -1,13 +1,13 @@
 
 
 .header{
-  position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
-  height: 100vh;/*高さを全画面にあわせる*/
+  position: relative;
+  height: 100vh;
 } 
 
 .video-area{
   position: fixed;
-  z-index: -1;/*最背面に設定*/
+  z-index: -1;
   top: 0;
   right:0;
   left:0;
@@ -16,15 +16,13 @@
 }
 
 .video {
-  /*天地中央配置*/
   position: absolute;
   z-index: -1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*縦横幅指定*/
-  width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
-  height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+  width: 177.77777778vh;
+  height: 56.25vw;
   min-height: 100%;
   min-width: 100%;
 }
@@ -32,17 +30,34 @@
 
 
 
+.advertisement{
+  background:#fff;
+  padding:500px 0;
+  text-align: center;
+}
 
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 80px;
+}
+
+p {
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+}
 
 /*
 @media以外の所は全てのサイズで読み込まれます。
 */
 p {
-  color:red;
+  color:rgb(6, 9, 82);
  }
  @media screen and (min-width:480px) {
      /*　画面サイズが480pxからはここを読み込む　*/
- p { color:#9f1919;}
+ p {}
  }
  @media screen and (min-width:768px) and ( max-width:1024px) {
      /*　画面サイズが768pxから1024pxまではここを読み込む　*/
