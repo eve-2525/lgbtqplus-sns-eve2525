@@ -32,10 +32,73 @@
 
 .advertisement{
   background:#fff;
-  padding:500px 0;
+  /* text-align: center; */
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+.topinfo1{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 20px solid;
+  border-image: conic-gradient(#f5f551,#5eff5e,#84a1ff,#ff45ff,#ff5a5a,#ffbc41,#f5f551) 1;
+  height: auto;
+
+}
+
+.video1{
+  width: 640px;
+  height: auto;
+  padding: 50px;
+
+}
+
+.topinfotext1{
+  width: 640px;
+  height: auto;
+  padding: 50px;
+
+}
+
+.infotitle1{
+  font-size: 55px;
   text-align: center;
 }
 
+
+.video2{
+  width: 640px;
+  height: auto;
+  padding: 50px;
+}
+
+/*1.フェードインアニメーションの指定*/
+.scrollanime {
+  opacity: 0;
+
+} 
+/*一瞬表示されるのを防ぐ*/
+.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;         
+    }
+    100% {
+    opacity: 1;
+    }
+}
+ 
+
+
+
+#wrapper{
+	max-width:100%;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
@@ -49,20 +112,55 @@ p {
   font-size: 60px;
 }
 
-/*
-@media以外の所は全てのサイズで読み込まれます。
-*/
-p {
-  color:rgb(6, 9, 82);
- }
- @media screen and (min-width:480px) {
-     /*　画面サイズが480pxからはここを読み込む　*/
- p {}
- }
- @media screen and (min-width:768px) and ( max-width:1024px) {
-     /*　画面サイズが768pxから1024pxまではここを読み込む　*/
- p {}
+ @media screen and (max-width:640px) {
+
+  div {
+    flex-direction: column;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing:border-box;
+  }
+
+
+
+  .video1{
+    max-width: 350px;
+    padding: 5px;
+    box-sizing:border-box;
+    height: 300px;
+  }
+
+  .video2{
+    max-width: 350px;
+    padding: 5px;
+    box-sizing:border-box;
+    height: 300px;
+  }
+
+}
+ @media screen and (min-width:641px) and ( max-width:1023px) {
+
+  .video1{
+    max-width: 100%;
+    padding: 20px;
+    box-sizing:border-box;
+    height: auto;
+  }
+
+  .video2{
+    max-width: 100%;
+    padding: 20px;
+    box-sizing:border-box;
+    height: auto;
+  }
+
+div {
+  flex-direction: column;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing:border-box;
+}
  }
  @media screen and (min-width:1024px) {
-     /*　画面サイズが1024pxからはここを読み込む　*/
+
  }
