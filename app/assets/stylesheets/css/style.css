@@ -62,7 +62,24 @@
 }
 
 .infotitle1{
-  font-size: 55px;
+  font-size: 45px;
+  text-align: center;
+}
+
+.infotitle2{
+  font-size: 30px;
+  text-align: center;
+}
+
+.sign-up{
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+.infotext{
+  font-size: 25px;
   text-align: center;
 }
 
