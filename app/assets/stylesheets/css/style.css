@@ -119,12 +119,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-h1 {
+.lgbtq {
   font-family: 'Caveat', cursive;
   font-size: 80px;
 }
 
-p {
+.infotitle3 {
+  font-family: 'Caveat', cursive;
+  font-size: 80px;
+  text-align: center;
+}
+
+.login {
   font-family: 'Caveat', cursive;
   font-size: 60px;
 }
