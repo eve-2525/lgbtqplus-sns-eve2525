@@ -28,7 +28,8 @@ has_many :followed, class_name: "Relationship", foreign_key: "followed_id", depe
 |-------------------|-------|-----------|
 |title              |string |null: false|タイトル
 |problem            |text   |null: false|悩み
-|status             |boolean|null: false|ステータス「受付中」「解決済み」
+|status             |integer|null: false|, default: 0「悩み投稿」「日記投稿」
+|situation          |integer|null: false|, default: 0「公開」「コメントなし公開」「非公開」「下書き保存」
 |user               |references|null: false|foreign_key: true|外部キーuser 悩み投稿者のid
 ### Association
 belongs_to:user
