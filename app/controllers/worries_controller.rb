@@ -19,7 +19,11 @@ def create
   end
 end
 
+private
 
+def worry_params
+  params.require(:worry).permit(:title, :problem, :status, :situation).merge(user_id: current_user.id)
+end
 
 
 
