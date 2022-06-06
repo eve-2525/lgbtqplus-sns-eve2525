@@ -1,0 +1,12 @@
+ja:
+  enums:
+    worry:
+      status:
+        worry: '悩みの相談'
+        diary: '日記の投稿'
+
+
+      situation:
+        published: '公開'
+        deleted: '非公開'
+        Solution: 'コメントなし公開'

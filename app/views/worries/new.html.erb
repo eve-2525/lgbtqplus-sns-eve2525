@@ -3,21 +3,26 @@
 
        <div class="new-items">
       <div class="weight-bold-text">
-        商品名
+        タイトル
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :title, class:"items-text", id:"item-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :title, class:"items-text", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
       <div class="items-explain">
         <div class="weight-bold-text">
-          商品の説明
+          内容
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :problem, class:"items-text", id:"item-info", placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,rows:"7" ,maxlength:"1000" %>
+        <%= f.text_area :problem, class:"items-text",  placeholder:"商品の説明（必須 1,000文字まで）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。" ,maxlength:"1000" %>
       </div>
     </div>
 
+  <%= f.select :status, Worry.statuses.keys.map { |k| [t("enums.worry.status.#{k}"),k]}, {}, {class: "custom-select w-25"} %>
+    <%= f.select :situation, Worry.situations.keys.map { |k| [t("enums.worry.situation.#{k}"),k]}, {}, {class: "custom-select w-25"} %>
+
+
+
         <div class="sell-btn-contents">
-      <%= f.submit "出品する" ,class:"sell-btn" %>
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
       <%=link_to 'もどる', indexmain_worry_path(current_user) , class:"back-btn" %>
     </div>
       <% end %>

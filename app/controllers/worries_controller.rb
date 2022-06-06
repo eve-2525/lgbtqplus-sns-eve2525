@@ -1,5 +1,6 @@
 class WorriesController < ApplicationController
   def indexmain
+    @worries = Worry.all
   end
 
 def new
@@ -18,6 +19,13 @@ def create
     render :new
   end
 end
+
+def show
+  @worry = Worry.find(params[:id])
+end
+
+
+
 
 private
 

@@ -6,3 +6,17 @@
 
                 <%=link_to '悩み投稿', new_worry_path , class:"back-btn" %>
 
+
+<h1>悩み一覧</h1>
+      <% @worries.reverse.each do |worry| %>
+ <%= link_to worry_path(worry.id) do %>
+                          <%# <% if worry.status == 0 %> %>
+
+    <h2 class="name">
+      <%= worry.title %>
+    </h2>
+
+
+          <%# <% end %> %>
+                        <% end %>
+              <% end %>
