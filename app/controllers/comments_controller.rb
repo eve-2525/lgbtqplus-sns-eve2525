@@ -2,8 +2,11 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new(comment_params)
+    @worry = Worry.find(params[:worry_id])
     if @comment.save
-      redirect_to worry_path(params[:item_id])
+      CommentChannel.broadcast_to @worry, { comment: @comment, user: @comment.user } 
+      # ActionCable.server.broadcast "comment_channel", {comment: @comment, user: @comment.user} 
+      # redirect_to worry_path(params[:item_id])
     end
   end
 
