@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
 has_one_attached :image
 has_many :worries
+has_many :comments
 
 validates :nickname, presence: true
 validates :email, presence: true

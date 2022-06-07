@@ -1,3 +1,27 @@
-<h3>悩み投稿者</h3><%= @worry.title %>
+<h3>悩み投稿者</h3>
+<%= @worry.user.nickname %>
+<%= @worry.title %>
 <%= @worry.problem %>
-<%= @worry.problem %>
+<%= @worry.status %>
+
+
+<div id="comments">
+  <h4>＜コメント一覧＞</h4>
+    <% @worry.comments.each do |comment| %>
+      <div class="comment">
+        <p class="user-info"><%= comment.user.nickname %>： </p>
+        <p><%= comment.answer%></p>
+      </div>
+    <% end %>
+</div>
+
+
+
+<div class="comment-form">
+    <%= form_with model: [@worry, @comment], id: "comment-form" do |f| %>
+      <%= f.text_area :answer , class: "comment-text"%>
+      <%= f.submit "コメントをする", class: "comment-submit" %>
+    <% end %>
+</div>
+
+      <%=link_to 'もどる', indexmain_worry_path(current_user) , class:"back-btn" %>

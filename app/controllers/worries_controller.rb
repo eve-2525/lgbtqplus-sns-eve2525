@@ -22,6 +22,9 @@ end
 
 def show
   @worry = Worry.find(params[:id])
+  @comments = @worry.comments.includes(:user)
+  @comment = Comment.new
+
 end
 
 

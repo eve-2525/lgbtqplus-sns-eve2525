@@ -5,8 +5,11 @@ Rails.application.routes.draw do
   root to: 'worries#index'
 
   # root to: 'top#index'
-  
+
+
   resources :worries do
+
+    resources :comments, only: :create
 
     member do
       get 'indexmain'
