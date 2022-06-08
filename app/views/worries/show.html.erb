@@ -4,6 +4,17 @@
 <%= @worry.problem %>
 <%= @worry.status %>
 
+        <% if current_user.liked_by?(@worry.id) %>
+          <td>いいねを外す</td>
+        <% else %>
+          <td><%= link_to 'いいね', worry_loves_path(post), method: :POST %></td>
+        <% end %>
+        <td><%= link_to 'Show', worry %></td>
+        <td><%= link_to 'Edit', worry_loves_path(worry) %></td>
+        <td><%= link_to 'Destroy', worry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+
+
 
 <div id="comments">
   <h4>＜コメント一覧＞</h4>

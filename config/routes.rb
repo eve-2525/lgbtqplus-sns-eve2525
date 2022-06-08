@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
     resources :comments, only: :create
 
+    resource :loves, only: [:create, :destroy]
+
     member do
       get 'indexmain'
       end

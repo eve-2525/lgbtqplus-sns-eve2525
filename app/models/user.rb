@@ -8,6 +8,7 @@ class User < ApplicationRecord
 has_one_attached :image
 has_many :worries
 has_many :comments
+has_many :loves
 
 validates :nickname, presence: true
 validates :email, presence: true

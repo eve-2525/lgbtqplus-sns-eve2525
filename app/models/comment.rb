@@ -4,5 +4,5 @@ class Comment < ApplicationRecord
 
 
   belongs_to :user
-belongs_to :worry
+  belongs_to :worry
 end
