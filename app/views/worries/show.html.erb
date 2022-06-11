@@ -4,14 +4,14 @@
 <%= @worry.problem %>
 <%= @worry.status %>
 
-        <% if current_user.liked_by?(@worry.id) %>
-          <td>いいねを外す</td>
+        <% if current_user.loved_by?(@worry.id) %>
+          <td><%= link_to 'いいねを外す', destroy_love_path(@worry), method: :DELETE %><%= @worry.love.count %></td>
         <% else %>
-          <td><%= link_to 'いいね', worry_loves_path(post), method: :POST %></td>
+          <td><%= link_to 'いいね', create_love_path(@worry), method: :POST %><%= worry.loves.count %></td>
         <% end %>
-        <td><%= link_to 'Show', worry %></td>
-        <td><%= link_to 'Edit', worry_loves_path(worry) %></td>
-        <td><%= link_to 'Destroy', worry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', @worry %></td>
+        <%# <td><%= link_to 'Edit', worry_loves_path(@worry) %></td> %>
+        <td><%= link_to 'Destroy', @worry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
 
 

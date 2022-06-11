@@ -8,9 +8,15 @@ class User < ApplicationRecord
 has_one_attached :image
 has_many :worries
 has_many :comments
+
 has_many :loves
 
 validates :nickname, presence: true
 validates :email, presence: true
 validates :encrypted_password, presence: true
+
+
+def loved_by?(worry_id)
+  Love.where(worry: worry_id).exists?
+end
 end
