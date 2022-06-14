@@ -44,12 +44,10 @@ ActiveRecord::Schema.define(version: 2022_06_08_112444) do
   end
 
   create_table "loves", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "worry_id", null: false
+    t.integer "user_id"
+    t.integer "worry_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_loves_on_user_id"
-    t.index ["worry_id"], name: "index_loves_on_worry_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -81,7 +79,5 @@ ActiveRecord::Schema.define(version: 2022_06_08_112444) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "comments", "users"
   add_foreign_key "comments", "worries"
-  add_foreign_key "loves", "users"
-  add_foreign_key "loves", "worries"
   add_foreign_key "worries", "users"
 end
