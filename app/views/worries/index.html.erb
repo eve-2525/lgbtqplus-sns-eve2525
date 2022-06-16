@@ -6,7 +6,7 @@
   </video>
     <!--/video-area--></div>
 
-<%= form_with model: @user, url: user_session_path,class: 'registration-main', local: true do |f| %>
+<%= form_with model: @user, url: user_session_path,class: '#', local: true do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -19,7 +19,7 @@
 
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in",class: 'btn-gradient-3d' %>
   </div>
 <% end %>
 </header>

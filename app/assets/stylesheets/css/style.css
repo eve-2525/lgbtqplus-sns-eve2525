@@ -98,14 +98,17 @@
   width: 100%;
   min-width: 800px;
   height: 100%;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   display: flex;
   justify-content: center;
+  background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)),
+  url(love-story-3060241_1280.jpg);
+  background-size: cover;
 }
 
 .form-wrap {
   width: 50%;
-  background-color: white;
+
   padding-bottom: 70px;
 }
 
@@ -118,7 +121,7 @@
 
 .form-header-text {
   line-height: 100px;
-  border-bottom: 1px solid #f5f5f5;
+color: #333333;
   font-weight: bold;
 }
 
@@ -142,7 +145,7 @@
 }
 
 .indispensable {
-  background: #ea352d;
+  background: blue;
   margin-left: 8px;
   padding: 3px;
   border-radius: 2px;
@@ -154,7 +157,7 @@
 .input-default {
   width: 100%;
   margin-top: 5px;
-  height: 48px;
+  height: 30px;
   padding: 10px 16px 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -162,6 +165,80 @@
   font-size: 16px;
   resize: none;
 }
+
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+  height: 120px;
+}
+
+.btn-gradient-3d {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #333333;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+  transition: .4s;
+}
+
+.btn-gradient-3d:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.form-group2 {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+.item-info {
+  width: 100%;
+  margin-top: 5px;
+  height: 60px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.form-group3 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form-group4 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #333333;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+  transition: .4s;
+}
+
+
 
 
 /*1.フェードインアニメーションの指定*/
