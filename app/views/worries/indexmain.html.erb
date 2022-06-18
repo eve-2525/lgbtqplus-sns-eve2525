@@ -1,22 +1,60 @@
-    <ul class='lists-right'>
-      <li><%= link_to current_user.nickname, "#", class: "user-nickname" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-          </ul>
+<%= render "shared/header" %>
+
 
 
                 <%=link_to '悩み投稿', new_worry_path , class:"back-btn" %>
 
+  <div class='contents-main'>
 
-<h1>悩み一覧</h1>
+<div class="worry-pucup">
+
+    <h2 class='worry-title'>     悩み一覧</h2>
+    <%# <div class="subtitle" >
+      悩み一覧
+    </div> %>
+
+
+                              <ul class='item-lists'>
+
       <% @worries.reverse.each do |worry| %>
- <%= link_to worry_path(worry.id) do %>
-                          <%# <% if worry.status == 0 %> %>
+            <li class='worry-list'>
 
-    <h2 class="name">
+                          <%# if worry.status == 0 %>
+
+
+<div class="worry-main">
+
+ <%= link_to worry_path(worry.id) , class:"problem-main" do %>
+
+<div class="worry-title2">
+    <%# <h2 class="name"> %>
       <%= worry.title %>
-    </h2>
-
-
-          <%# <% end %> %>
+    <%# </h2> %>
+    </div>
                         <% end %>
+
+<div class="problem-main2">
+      <%= worry.problem.truncate(10) %>
+</div>
+
+<p class="problem-main3">
+      <%= worry.created_at %>
+</p>
+
+<p class="problem-main4">
+      <%= worry.user.nickname %>
+</p>
+
+</div>
+          <%# end %>
+
+       </li>
               <% end %>
+                  </ul>
+
+                  </div>
+
+<div class="diary-pucup">
+                  </div>
+
+                  </div>
