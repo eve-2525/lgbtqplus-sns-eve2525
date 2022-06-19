@@ -341,24 +341,17 @@ color: #333333;
 }
 
 .contents-main {
-  background-color:rgb(102, 102, 110);
+
   display: flex;
   margin: 0 150px;
+justify-content: space-between;
 }
 
 .worry-pucup{
-  background-color: #3ccace;
+
 width: 30vw;
 }
 
-
-.worry-title {
-  font-size: 5vh;
-  line-height: 1.4;
-  font-weight: bold;
-  color: blue;
-  text-align: center;
-}
 
 /* .item-contents>.subtitle {
   font-size: 3vh;
@@ -379,10 +372,15 @@ width: 30vw;
 
 .worry-title2{
   font-size: 33px;
-  height: 70px;
+  height: 50px;
   background-color:#DDDDDD ;
   color: #333333;
 }
+
+.worry-title2:hover{
+  color:#6098FF;  
+}
+
 
 .problem-main2{
   font-size: 18px;
@@ -400,6 +398,7 @@ color: #333333;
 
 .problem-main4{
   font-size: 18px;
+  height: 10px;
   display: grid;
   justify-content: right;
   color: #333333;
@@ -423,10 +422,8 @@ color: #333333;
   /* width: 90vw; */
   /* height: 200px; */
   /* border: solid 3px #555555; */
-  margin: 10px;
+  margin: 10px 10px 18px 10px;
 }
-
-
 
 
 /*1.フェードインアニメーションの指定*/
@@ -448,8 +445,73 @@ html, body {
 
 }
 
+.diary-pucup{
+width: 30vw;
+}
+
+.worry-title {
+	color: #d04255; /* 文字色 */
+	padding: 10px 10px 10px 60px; /* 上・右・下・左の余白 */
+	position: relative;
 
 
+    /* font-size: 5vh; */
+    /* line-height: 1.4;
+    font-weight: bold; */
+
+    /* text-align: center; */
+
+}
+.worry-title:before {
+	content: '＊*'; /*花に見せかけるためのアスタリスク*/
+	color: #fff; /* アスタリスクの色 */
+	display: inline-block;
+	font-size: 30px; /* アスタリスクの大きさ */
+	font-weight: bold;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: rotate(20deg);
+	-moz-transform: rotate(20deg);
+	-webkit-transform: rotate(20deg);
+	-o-transform: rotate(20deg);
+	text-shadow: 0px 0px 6px #EAA8BF, 0px 0px 4px #EAA8BF, 0 0 0.5px #EAA8BF; /* アスタリスク周りの影 */
+}
+.worry-title:after {
+	border-bottom: 2px dotted #EAA8BF; /* 下線 */
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+
+
+
+
+
+
+/* 背景クローバー */
+.clover-svg {
+  width: 100%;
+  height: 100%;
+  background-size: 120px 120px;
+  background-repeat: repeat;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20120%20120%22%3E%20%3Cpath%20d%3D%22M57.83%2C10.21A10.16%2C10.16%2C0%2C0%2C1%2C54.26%2C18l-.07.05h0L37.4%2C34.82%2C20.6%2C18h0L20.54%2C18A10.21%2C10.21%2C0%2C1%2C1%2C37.17%2C8.07c0%2C.24.09.48.13.73a.69.69%2C0%2C0%2C0%2C0%2C.13c0%2C.13%2C0%2C.26%2C0%2C.4s0%2C.58%2C0%2C.88c0-.3%2C0-.59%2C0-.88s0-.27%2C0-.4a.69.69%2C0%2C0%2C0%2C0-.13c0-.25.08-.49.13-.73a10.21%2C10.21%2C0%2C0%2C1%2C20.2%2C2.14Z%22%20style%3D%22fill%3A%23fcf8cf%22%20%2F%3E%20%3Cpath%20d%3D%22M10.21%2C16.73A10.16%2C10.16%2C0%2C0%2C1%2C18%2C20.3l.05.07h0l16.8%2C16.8L18%2C54h0L18%2C54A10.21%2C10.21%2C0%2C1%2C1%2C8.07%2C37.39l.73-.13.13%2C0%2C.4%2C0c.29%2C0%2C.58%2C0%2C.88%2C0-.3%2C0-.59%2C0-.88%2C0l-.4%2C0-.13%2C0-.73-.13a10.21%2C10.21%2C0%2C0%2C1%2C2.14-20.2Z%22%20style%3D%22fill%3A%23def0ed%22%20%2F%3E%20%3Cpath%20d%3D%22M65%2C57.58A10.13%2C10.13%2C0%2C0%2C1%2C57.29%2C54a.1.1%2C0%2C0%2C1%2C0-.07h0l-16.8-16.8%2C16.8-16.8h0a.1.1%2C0%2C0%2C1%2C0-.07%2C10.21%2C10.21%2C0%2C1%2C1%2C9.89%2C16.63l-.74.13-.13%2C0-.39%2C0c-.3%2C0-.59%2C0-.88%2C0%2C.29%2C0%2C.58%2C0%2C.88%2C0l.39%2C0%2C.13%2C0%2C.74.13A10.21%2C10.21%2C0%2C0%2C1%2C65%2C57.58Z%22%20style%3D%22fill%3A%23def0ed%22%20%2F%3E%20%3Cpath%20d%3D%22M17%2C63.61a10.16%2C10.16%2C0%2C0%2C1%2C3.57-7.75l.07%2C0h0L37.42%2C39%2C54.21%2C55.8h0a.18.18%2C0%2C0%2C1%2C.07%2C0%2C10.21%2C10.21%2C0%2C1%2C1-16.63%2C9.89c0-.24-.09-.48-.13-.73a.69.69%2C0%2C0%2C0%2C0-.13c0-.13%2C0-.26%2C0-.4s0-.58%2C0-.88c0%2C.3%2C0%2C.59-.05.88s0%2C.27%2C0%2C.4a.69.69%2C0%2C0%2C0%2C0%2C.13c0%2C.25-.08.49-.13.73A10%2C10%2C0%2C0%2C1%2C35%2C70.26a10.22%2C10.22%2C0%2C0%2C1-18-6.65Z%22%20style%3D%22fill%3A%23fcf8cf%22%20%2F%3E%20%3C%2Fsvg%3E");
+  animation: cloverAnim 10s infinite linear;
+}
+
+@keyframes cloverAnim {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 120px -120px;
+  }
+}
+
+/* 背景クローバー */
 
 
 
