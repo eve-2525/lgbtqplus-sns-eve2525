@@ -47,7 +47,7 @@ https://docs.google.com/spreadsheets/d/1_UHm8OVldspIutMGFGkfsXX-inxdgcqmG6XG7FWu
 ・タグづけ機能の実装
 ・検索機能の実装
 
-# *一部まだ実装できていないテーブル情報もあります
+### *一部まだ実装できていないテーブル情報もあります
 ## 「ユーザー情報」Tabel
 ・usersテーブル
 |Column            |Type   |Options    |
