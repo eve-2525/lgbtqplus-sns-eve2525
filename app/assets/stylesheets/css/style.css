@@ -240,20 +240,33 @@ color: #333333;
 
 .top-page-header {
   /* width: 100vw; */
-  padding: 2vh 15vw;
+  /* padding: 2vh 15vw; */
   display: flex;
   flex-direction: column;
+  /* padding: 0.5em 1em; */
+  /* margin: 2em 0; */
+  border: double 5px #4ec4d3;
+  background: -webkit-repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+}
+
+.back-btn{
+  font-family: 'Caveat', cursive;
+  font-size: 60px;
+  color: #333333;
+  text-decoration: none;
 }
 
 .search-bar-contents {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
+  justify-content: space-around;
 }
 
 .search-form {
   width: 65vw;
-  height: 5vh;
+  height: 6vh;
   display: flex;
   margin-bottom: 5px;
 }
@@ -265,7 +278,8 @@ color: #333333;
 }
 
 .search-button {
-  width: 5vh;
+  width: 3.4vw;
+  height: 5.6vh;
   border: 0;
   cursor: pointer;
   background-color: #3ccace;
