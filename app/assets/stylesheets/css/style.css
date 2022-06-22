@@ -278,11 +278,11 @@ color: #333333;
 }
 
 .search-button {
-  width: 3.4vw;
+  width: 3.3vw;
   height: 5.6vh;
   border: 0;
   cursor: pointer;
-  background-color: #3ccace;
+  background-color: #427cd4;
   padding: 8px;
 }
 
@@ -483,57 +483,34 @@ width: 30vw;
 	width: 100%;
 }
 
-
+.lists-right {
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+}
 
 .navigation{
-  /* flexboxで要素を真ん中に指定 */
   display: flex;
-  align-items: center;
-  width: 1300px;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 1vh 0;
+  justify-content: space-around;
 }
-.navigation ul {
-  width: 100%;
+
+.btn-gradient-4d {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #333333;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+  transition: .4s;
+  font-size: 30px;
 }
-.button{
-  display: block;
-  padding:10px;
-  background:white;
-  width:20%;
-  float:left;
-  /* カーソルを離した際のアニメーションの速度調整 */
-  transition:.2s all;
-}
-.button p {
-  height: 10px;
-  font-weight: 300;
-}
-.button a {
-  color:#333333;
-  /* リンク指定した要素のスタイルを削除 */
-  text-decoration:none;
-}
-.navigation:hover .button{
-  /* ナビゲーションをマウスオーバーした際のアニメーションの動きを指定 */
-  opacity:.5;
-  /* 全てのボタンが少し小さくなる */
-  transform: scale(.98);
-}
-.navigation:hover .button:hover{
-  transition: .5s;
-  /* hover時の速度調整 */
-  transform:scale(1.5);
-  /* hoverしたボタンのみサイズを拡大する指定 */
-  opacity:1;
-}
-.navigation:hover .button:hover > p {
-  font-weight: bold;
-}
+
+
+
+
+
+
 
 
 
