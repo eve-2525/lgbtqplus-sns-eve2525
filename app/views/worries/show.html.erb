@@ -1,35 +1,60 @@
 <%= render "shared/header" %>
 
+<div class="showmain">
 
+<div class="worry-main3">
 
-<h3>悩み投稿者</h3>
-<%= @worry.user.nickname %>
+<div class="worry-title3">
+    <%# <h2 class="name"> %>
 <%= @worry.title %>
+    <%# </h2> %>
+    </div>
+
+<div class="problem-main5">
 <%= @worry.problem %>
-<%= @worry.status %>
+</div>
+
+<p class="problem-main3">
+      <%= @worry.created_at %>
+</p>
+
+<p class="problem-main4">
+      <%= @worry.user.nickname %>
+</p>
+
+
+          <%# end %>
+
+</div>
+
 
         <% if current_user.loved_by?(@worry.id) %>
           <td><%= link_to 'いいねを外す', destroy_love_path(@worry), method: :DELETE %> 
-          <%# <%= @worry.love.count %> %>
+          <%#= @worry.love.count %>
            <%= @love_count %>
           </td>
         <% else %>
           <td><%= link_to 'いいね', create_love_path(@worry), method: :POST %> 
-          <%# <%= @worry.loves.count %> %>
+          <%#= @worry.loves.count %>
           <%= @love_count %>
           </td>
         <% end %>
-        <td><%= link_to 'Show', @worry %></td>
-        <%# <td><%= link_to 'Edit', worry_loves_path(@worry) %></td> %>
-        <td><%= link_to 'Destroy', @worry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%# <td><%= link_to 'Show', @worry %>
+        <%# <td><%= link_to 'Edit', worry_loves_path(@worry)</td> %>
+        <%# <td><%= link_to 'Destroy', @worry, method: :delete, data: { confirm: 'Are you sure?' } %>
       </tr>
+
+
+
+
+
 
 
 
 <div id="comments">
   <h4>＜コメント一覧＞</h4>
     <% @worry.comments.each do |comment| %>
-      <div class="comment">
+      <div class="comment-user">
         <p class="user-info"><%= comment.user.nickname %>： </p>
         <p><%= comment.answer%></p>
       </div>
@@ -37,12 +62,13 @@
 </div>
 
 
-
-<div class="comment-form">
+  <div class="comment-box">
     <%= form_with model: [@worry, @comment], id: "comment-form" do |f| %>
       <%= f.text_area :answer , class: "comment-text"%>
-      <%= f.submit "コメントをする", class: "comment-submit" %>
-    <% end %>
-</div>
+      <%= f.submit "コメントをする", class: "comment-btn" %>
+          <% end %>
+  </div>
 
-      <%=link_to 'もどる', indexmain_worry_path(current_user) , class:"back-btn" %>
+      <%=link_to 'もどる', indexmain_worry_path(current_user) , class:"back-btn2" %>
+
+</div>

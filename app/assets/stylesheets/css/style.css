@@ -506,7 +506,94 @@ width: 30vw;
   font-size: 30px;
 }
 
+.showmain{
+  display: flex;
+  justify-content: center;
+flex-direction: column;
+align-items: center;
 
+}
+
+.worry-main2{
+margin-top: 50px;
+  border: solid 2px #333333;
+width: 500px;
+height: 100%;
+
+}
+
+.comment-box {
+  width: 40vw;
+  background-color: #fff;
+  margin: 5vh 0;
+  text-align: center;
+}
+
+.comment-text {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: solid 2px #dedede;
+  resize: none;
+}
+
+
+.comment-btn {
+  line-height: 48px;
+  background-color: #537ee2;
+  border: 1px solid #537ee2;
+  color: #fff;
+  width: 50%;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-bottom: 2vh;
+}
+
+.comment-flag {
+  display: flex;
+  justify-content: center;
+}
+
+.comment-flag-icon {
+  margin: 10px 5px 0 0;
+}
+
+.back-btn2{
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.worry-main3{
+  margin-top: 50px;
+    border: solid 2px #333333;
+  width: 100%;
+  height: 100%;
+  display:inline-block;
+  max-width: 700px;
+  display:inline-block;
+  }
+
+  .worry-title3{
+    font-size: 33px;
+    height: auto;
+    background-color:#DDDDDD ;
+    color: #333333;
+    display:inline-block;
+  }
+
+  .problem-main5{
+    font-size: 18px;
+    height: auto;
+    color: #333333;
+    display:inline-block;
+  }
+
+.comment-user{
+  display: flex;
+}
 
 
 
